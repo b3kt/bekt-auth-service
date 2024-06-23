@@ -7,12 +7,14 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.io.Serializable;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
-public class RegisterCommandRequest extends BaseRequest {
+@NoArgsConstructor
+public class RegisterCommandRequest extends BaseRequest implements Serializable {
     private String name;
     private String email;
     private String phoneNumber;

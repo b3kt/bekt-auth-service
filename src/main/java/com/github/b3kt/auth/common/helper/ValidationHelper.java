@@ -7,7 +7,7 @@ import jakarta.validation.Validator;
 @ApplicationScoped
 public class ValidationHelper {
     @Inject
-    private Validator validator;
+    Validator validator;
 
     public <R> R validate(R requestModel){
         try{

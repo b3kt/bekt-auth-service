@@ -13,10 +13,7 @@ import org.apache.http.HttpStatus;
 
 
 @ApplicationScoped
-public class LoginCommand extends AbstractCommand implements ILoginCommand {
-
-    @Inject
-    IKeycloakProvider keycloakProvider;
+public class LoginCommand extends BaseKeycloakCommand implements ILoginCommand {
 
     @Override
     public Uni<LoginCommandResponse> execute(LoginCommandRequest loginCommandRequest) {
@@ -34,7 +31,8 @@ public class LoginCommand extends AbstractCommand implements ILoginCommand {
                         .builder()
                         .responseCode(HttpStatus.SC_OK)
                         .responseMessage("Ok")
-                        .token(accessToken.getToken())
+                        .accessToken(accessToken.getToken())
+                        .refreshToken(accessToken.getRefreshToken())
                         .build());
     }
 }

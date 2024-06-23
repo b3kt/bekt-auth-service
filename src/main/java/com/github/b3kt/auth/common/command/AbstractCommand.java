@@ -9,9 +9,6 @@ import org.slf4j.Logger;
 @Slf4j
 public abstract class AbstractCommand {
 
-    @Inject
-    protected ObjectMapper objectMapper;
-
     @ConfigProperty(name = "app.auth.client-id")
     protected String clientId;
 
@@ -20,8 +17,4 @@ public abstract class AbstractCommand {
 
     @ConfigProperty(name = "app.auth.grant-type")
     protected String grantType;
-
-    protected Logger getLogger(){
-        return log;
-    }
 }

@@ -9,11 +9,11 @@ import lombok.experimental.SuperBuilder;
 
 import java.io.Serializable;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterCommandResponse extends BaseResponse implements Serializable{
-    private String username;
+@EqualsAndHashCode(callSuper = true)
+public class BooleanResponse extends BaseResponse implements Serializable {
+    private boolean result;
 }

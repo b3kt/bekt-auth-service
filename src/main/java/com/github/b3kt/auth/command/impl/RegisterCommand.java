@@ -12,10 +12,7 @@ import jakarta.inject.Inject;
 import org.apache.http.HttpStatus;
 
 @ApplicationScoped
-public class RegisterCommand extends AbstractCommand implements IRegisterCommand {
-
-    @Inject
-    IKeycloakProvider keycloakProvider;
+public class RegisterCommand extends BaseKeycloakCommand implements IRegisterCommand {
 
     @Override
     public Uni<RegisterCommandResponse> execute(RegisterCommandRequest request) {

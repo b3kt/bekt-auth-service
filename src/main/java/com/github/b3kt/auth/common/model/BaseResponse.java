@@ -13,4 +13,5 @@ import lombok.experimental.SuperBuilder;
 public class BaseResponse {
     private int responseCode;
     private String responseMessage;
+    private boolean success;
 }

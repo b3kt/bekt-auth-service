@@ -7,8 +7,6 @@ import com.github.b3kt.auth.provider.model.BaseResponse;
 import io.vertx.core.json.JsonObject;
 import jakarta.inject.Inject;
 
-import javax.xml.validation.Validator;
-
 public abstract class AbstractProvider<R extends BaseResponse> {
 
     @Inject
@@ -18,6 +16,6 @@ public abstract class AbstractProvider<R extends BaseResponse> {
     protected ValidationHelper validationHelper;
 
     public R toResponse(JsonObject response){
-        return objectMapper.convertValue(response, new TypeReference<R>() {});
+        return objectMapper.convertValue(response, new TypeReference<>() {});
     }
 }

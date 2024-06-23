@@ -1,8 +1,10 @@
 package com.github.b3kt.auth.provider.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.SuperBuilder;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @SuperBuilder
 public class GetAccessTokenResponse extends BaseResponse {

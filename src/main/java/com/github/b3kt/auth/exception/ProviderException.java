@@ -1,13 +1,11 @@
 package com.github.b3kt.auth.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.jboss.resteasy.reactive.ClientWebApplicationException;
 
 import java.util.Optional;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
